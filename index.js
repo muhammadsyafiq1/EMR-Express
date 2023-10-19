@@ -29,7 +29,7 @@ try {
     await db.authenticate() //menghubungkan ke db
     console.log("Berhasil terkoneksi")
     // await AsesmenNyeri.sync()
-    await AsesmenAnak.sync()
+    // await AsesmenAnak.sync()
 } catch (error) {
     console.log(error);
 }
