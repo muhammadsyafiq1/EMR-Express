@@ -8,7 +8,7 @@ import db from "./config/Database.js"
 //ROUTES
 import AsesmenNyeriRoutes from "./routes/keperawatan/AsesmenNyeriRoutes.js"
 import AsesmenAnakRoutes from "./routes/keperawatan/AsesmenAnakRoutes.js"
-import SkalaJatuhRoutes from "./routes/keperawatan/SkalaJatuh.js"
+import SkalaJatuhRoutes from "./routes/keperawatan/SkalaJatuhRoutes.js"
 
 //MODELS
 import AsesmenNyeri from "./models/keperawatan/AsesmenNyeri.js"
