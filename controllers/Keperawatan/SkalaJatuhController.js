@@ -117,3 +117,24 @@ export const Show = async (req, res) => {
         console.log(error);
     }
 }
+
+export const DeleteIntervensi = async(req, res) => {
+    try {
+        const data = await IntervensiSkalaJatuh.findOne({
+            where :{
+                id: req.params.id
+            }
+        })
+        if(!data){
+            return res.status(404).json({msg: "Data tidak ada"})
+        }
+        await SkalaJatuh.destroy({
+            where:{
+                id:  req.params.id
+            }
+        })
+        return res.status(201).json({msg: "Data berhasil dihapus"})
+    } catch (error) {
+        console.log(error);
+    }
+}
