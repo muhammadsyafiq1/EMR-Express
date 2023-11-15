@@ -118,6 +118,23 @@ export const Show = async (req, res) => {
     }
 }
 
+export const ShowById = async (req,res) => {
+    try {
+        const data = await SkalaJatuh.findOne({
+            where: {
+                id: req.params.id
+            },
+            include: {
+                model: IntervensiSkalaJatuh,
+                as: 'IntervensiSkalaJatuh',
+            }
+        })
+        res.json(data)
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export const DeleteIntervensi = async(req, res) => {
     try {
         const data = await IntervensiSkalaJatuh.findOne({

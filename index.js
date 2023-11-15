@@ -15,6 +15,8 @@ import AsesmenNyeri from "./models/keperawatan/AsesmenNyeri.js"
 import AsesmenAnak from "./models/keperawatan/AsesmenAnak.js"
 import SkalaJatuh from "./models/keperawatan/SkalaJatuh.js"
 import IntervensiSkalaJatuh from "./models/keperawatan/IntervensiSkalaJatuh.js"
+import SkalaJatuhDewasa from "./models/keperawatan/SkalaJatuhDewasa.js"
+import IntervensiSkalaJatuhDewasa from "./models/keperawatan/IntervensiSkalaJatuhDewasa.js"
 
 const app = express()
 
@@ -40,6 +42,8 @@ try {
     // await AsesmenAnak.sync()
     // await SkalaJatuh.sync()
     // await IntervensiSkalaJatuh.sync()
+    await SkalaJatuhDewasa.sync()
+    await IntervensiSkalaJatuhDewasa.sync()
 } catch (error) {
     console.log(error);
 }
