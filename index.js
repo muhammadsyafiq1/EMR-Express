@@ -42,8 +42,8 @@ try {
     // await AsesmenAnak.sync()
     // await SkalaJatuh.sync()
     // await IntervensiSkalaJatuh.sync()
-    await SkalaJatuhDewasa.sync()
-    await IntervensiSkalaJatuhDewasa.sync()
+    // await SkalaJatuhDewasa.sync()
+    // await IntervensiSkalaJatuhDewasa.sync()
 } catch (error) {
     console.log(error);
 }
