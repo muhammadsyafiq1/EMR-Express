@@ -9,6 +9,7 @@ import db from "./config/Database.js"
 import AsesmenNyeriRoutes from "./routes/keperawatan/AsesmenNyeriRoutes.js"
 import AsesmenAnakRoutes from "./routes/keperawatan/AsesmenAnakRoutes.js"
 import SkalaJatuhRoutes from "./routes/keperawatan/SkalaJatuhRoutes.js"
+import CatatanAnestasiRoutes from "./routes/ibs/CatatanAnestasiRoutes.js"
 
 //MODELS
 import AsesmenNyeri from "./models/keperawatan/AsesmenNyeri.js"
@@ -36,11 +37,12 @@ app.use(fileUpload())
 app.use(AsesmenNyeriRoutes)
 app.use(AsesmenAnakRoutes)
 app.use(SkalaJatuhRoutes)
+app.use(CatatanAnestasiRoutes)
 
 try {
     await db.authenticate() //menghubungkan ke db
     console.log("Berhasil terkoneksi")
-    await CatatanAnestasiPraInduksi.sync()
+    // await CatatanAnestasiPraInduksi.sync()
 
 } catch (error) {
     console.log(error);

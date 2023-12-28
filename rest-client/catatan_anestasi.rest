@@ -1,0 +1,64 @@
+###
+
+POST http://localhost:6000/create-lembar
+Content-Type: application/json
+
+{
+    "norm":"123",
+    "notr":"123",
+    "username":"syafiq",
+    "tanggal":"2023-12-12"
+}
+
+###
+POST  http://localhost:6000/create-pra-induksi
+Content-Type: application/json
+
+{
+  "catatan_anestasi_id": 1,
+  "dokter_bedah": "Dr. John Doe",
+  "ahli_anestasi": "Dr. Jane Smith",
+  "asisten_anestasi": "Suster Mary",
+  "tanggal": "2023-12-28",
+  "jam": "14:30",
+  "tindakan_operasi": "Operasi Apendiktomi",
+  "lama_operasi": 60,
+  "riwayat_anestesi": "Tidak ada riwayat anestesi sebelumnya",
+  "abdomen_palpasi": "Normal",
+  "kesadaran": "Lusia",
+  "ekstremitas": "Normal",
+  "jalan_nafas": "Spontan",
+  "laboratorium": "Normal",
+  "tensi": "120/80",
+  "n": "Normal",
+  "hb": "12.5",
+  "ht": "40",
+  "spo2": "98%",
+  "s": "Normal",
+  "bt": "37.5",
+  "ct": "Normal",
+  "jantung_ekg": "Normal",
+  "analisa_klasifikasi_asa": "ASA I",
+  "general_anestesia": "Propofol, Fentanyl",
+  "regional_anestesia": "Epidural",
+  "regional_anestesia_lainnya": "Bloka Nervus Brachialis",
+  "lain_lain": "Tidak ada informasi tambahan",
+  "alternatif": "Anestesi lokal"
+}
+
+
+###
+GET  http://localhost:6000/list-lembar
+Content-Type: application/json
+
+{
+  "norm":"123"
+}
+
+###
+GET  http://localhost:6000/show-catatan-anestasi
+Content-Type: application/json
+
+{
+  "catatan_anestasi_id":1
+}
