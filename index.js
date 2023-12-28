@@ -17,6 +17,8 @@ import SkalaJatuh from "./models/keperawatan/SkalaJatuh.js"
 import IntervensiSkalaJatuh from "./models/keperawatan/IntervensiSkalaJatuh.js"
 import SkalaJatuhDewasa from "./models/keperawatan/SkalaJatuhDewasa.js"
 import IntervensiSkalaJatuhDewasa from "./models/keperawatan/IntervensiSkalaJatuhDewasa.js"
+import ParentTable from "./models/ibs/CatatanAnestasi.js"
+import CatatanAnestasiPraInduksi from "./models/ibs/CatatanAnestasiPraInduksi.js"
 
 const app = express()
 
@@ -38,12 +40,8 @@ app.use(SkalaJatuhRoutes)
 try {
     await db.authenticate() //menghubungkan ke db
     console.log("Berhasil terkoneksi")
-    // await AsesmenNyeri.sync()
-    // await AsesmenAnak.sync()
-    // await SkalaJatuh.sync()
-    // await IntervensiSkalaJatuh.sync()
-    // await SkalaJatuhDewasa.sync()
-    // await IntervensiSkalaJatuhDewasa.sync()
+    await CatatanAnestasiPraInduksi.sync()
+
 } catch (error) {
     console.log(error);
 }
